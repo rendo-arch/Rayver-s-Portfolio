@@ -329,26 +329,39 @@
   .stack-placeholder svg{width:26px;height:26px;stroke:var(--text-faint);fill:none;}
   .stack-placeholder span{font-size:11.5px; font-weight:500;}
 
-  /* ---------- FLOATING DOCK (visitor badge + chat) ---------- */
+  /* ---------- FLOATING DOCK (visitor wall + chat) ---------- */
   .floating-dock{
     position:fixed; bottom:28px; right:28px; z-index:90;
     display:flex; align-items:center; gap:12px;
   }
-  .visitor-badge{
+  .visitor-wall{
     display:flex; align-items:center; gap:8px;
     background:var(--card); border:1px solid var(--border);
-    padding:8px 14px 8px 8px; border-radius:30px;
+    padding:6px 14px 6px 6px; border-radius:30px;
     box-shadow:0 6px 18px rgba(0,0,0,0.08);
     font-size:12.5px; font-weight:500; color:var(--text-muted);
   }
+  .visitor-signin{
+    display:flex; align-items:center; gap:7px;
+    padding:7px 12px; border-radius:20px; border:1px solid var(--border);
+    font-size:12.5px; font-weight:500; color:var(--text);
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .visitor-signin:hover{border-color:var(--border-strong); background:var(--bg-alt);}
+  .visitor-signin:disabled{opacity:.55; cursor:default;}
   .visitor-avatars{display:flex;}
-  .visitor-avatars span{
-    width:22px;height:22px; border-radius:50%; margin-left:-8px;
-    border:2px solid var(--card); background:var(--vc, var(--text-faint));
+  .visitor-avatars img{
+    width:24px; height:24px; border-radius:50%; margin-left:-8px;
+    border:2px solid var(--card); object-fit:cover; background:var(--bg-alt);
+    display:block;
+  }
+  .visitor-avatars img:first-child{margin-left:0;}
+  .visitor-avatars .visitor-more{
+    width:24px; height:24px; border-radius:50%; margin-left:-8px;
+    border:2px solid var(--card); background:var(--text-faint);
     display:flex; align-items:center; justify-content:center;
     font-size:9px; font-weight:700; color:var(--invert-text);
   }
-  .visitor-avatars span:first-child{margin-left:0;}
 
   .fab{
     background:var(--invert-bg); color:var(--invert-text);
@@ -459,7 +472,7 @@
     .hero{padding:70px 0 60px;}
     .fab span{display:none;}
     .fab{padding:14px;}
-    .visitor-badge span.visitor-count{display:none;}
+    .visitor-wall .visitor-count{display:none;}
     .chat-panel{right:16px; bottom:88px; width:calc(100vw - 32px);}
     .floating-dock{right:16px; bottom:16px;}
   }

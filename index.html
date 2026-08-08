@@ -48,11 +48,13 @@
       </div>
     </div>
     <h1>John Rayver Colina<span class="cursor"></span></h1>
-    <p class="role">Freelance Web Developer — <strong>Frontend &amp; Database</strong></p>
+    <p class="role">Freelance Web Developer — <strong>Backend &amp; Database Focused</strong></p>
     <p class="bio">
-      Frontend-focused developer with a passion for UI/UX and database design.
-       I build web applications that balance clean interfaces, intuitive user experiences, 
-       and well-structured systems. Based in Quezon City, Philippines.
+      I build web apps and backend systems end to end — from database design to
+      working UI. I like problems with a clear wrong answer and a satisfying right one,
+      which is probably why backend and databases are where I spend most of my time.
+      Based in Quezon City, Philippines.
+    </p>
     <div class="trait-tags">
       <span>Problem Solving</span>
       <span>Logical Thinking</span>
@@ -163,7 +165,7 @@
     <div class="timeline">
       <div class="timeline-item reveal">
         <!-- TODO: add the actual dates -->
-        <div class="timeline-date">06/2026</div>
+        <div class="timeline-date">Add dates</div>
         <div class="timeline-content">
           <h3>FlowBorn — Real-Time Notification System</h3>
           <div class="role-meta">System Research Project · C++ (Win32 GUI)</div>
@@ -226,7 +228,7 @@
           <div class="edu-item">
             <span class="edu-date">Senior High School</span>
             <h3>STEM Strand</h3>
-            <p>Graduate - 2025</p>
+            <p>Graduate</p>
           </div>
         </div>
       </div>
@@ -305,12 +307,17 @@
 </main>
 
 <div class="floating-dock">
-  <div class="visitor-badge" id="visitorBadge">
-    <div class="visitor-avatars">
-      <span style="--vc:#0a0a0a;">JR</span>
-      <span style="--vc:#54545c;">✦</span>
-      <span style="--vc:#9a9aa2;">✦</span>
-    </div>
+  <div class="visitor-wall" id="visitorWall">
+    <button class="visitor-signin" id="visitorSignIn" title="Sign in with Google to be counted">
+      <svg viewBox="0 0 48 48" width="15" height="15">
+        <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l6-6C34.1 5.1 29.3 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21c0-1.4-.1-2.5-.4-3.5z"/>
+        <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.1 8 3l6-6C34.1 5.1 29.3 3 24 3 16.3 3 9.7 7.3 6.3 14.7z"/>
+        <path fill="#4CAF50" d="M24 45c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 36.6 26.7 37.5 24 37.5c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 40.6 16.2 45 24 45z"/>
+        <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.7l6.2 5.2C39.7 37 43 31.1 43 24c0-1.4-.1-2.5-.4-3.5z"/>
+      </svg>
+      <span>Sign in</span>
+    </button>
+    <div class="visitor-avatars" id="visitorAvatars"></div>
     <span class="visitor-count" id="visitorCount">— visitors</span>
   </div>
   <button class="fab" id="chatToggle" aria-label="Open chat with Rayver">
@@ -345,6 +352,7 @@
 </div>
 
 <script src="js/script.js" defer></script>
+<script type="module" src="js/visitors.js"></script>
 
 
 </body>

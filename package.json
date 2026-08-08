@@ -5,5 +5,8 @@
   "description": "Personal portfolio site",
   "scripts": {
     "build": "echo \"no build step needed\""
+  },
+  "dependencies": {
+    "firebase": "^12.17.1"
   }
 }

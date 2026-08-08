@@ -219,18 +219,8 @@
   })();
 
   /* ---------- VISITOR COUNTER ---------- */
-  // Free, keyless hit-counter API (countapi.mileshilliard.com). Swap the key below
-  // if you ever see a suspiciously high number (keys are public/shared).
-  fetch('https://countapi.mileshilliard.com/api/v1/hit/jrc-colina-portfolio-qcph-2026')
-    .then(res => res.json())
-    .then(data => {
-      const el = document.getElementById('visitorCount');
-      if (el && data && data.value !== undefined) el.textContent = data.value + ' visitors';
-    })
-    .catch(() => {
-      const el = document.getElementById('visitorCount');
-      if (el) el.textContent = 'Welcome!';
-    });
+  // Real, account-based visitor tracking now lives in js/visitors.js
+  // (Firebase Auth + Firestore) — this old countapi hit-counter is retired.
 
   /* ---------- CHAT WITH RAYVER (rule-based auto-reply) ---------- */
   (function initChat(){
